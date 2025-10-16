@@ -2923,7 +2923,7 @@ function getAppState(jar, Encode) {
     var logger = require('./logger'),languageFile = require('./Language/index.json');
     var Language = languageFile.find(i => i.Language == globalThis.Fca.Require.Priyansh.Language).Folder.Index;
     var data;
-        switch (require(process.cwd() + "/PriyanshFca.json").EncryptFeature) {
+        switch (require(process.cwd() + "/NazrulFca.json").EncryptFeature) {
             case true: {
                 if (Encode == undefined) Encode = true;
                 if (process.env['FBKEY'] != undefined && Encode) {
@@ -2938,7 +2938,7 @@ function getAppState(jar, Encode) {
             }
                 break;
             default: {
-                logger.Normal(getText(Language.IsNotABoolean,require(process.cwd() + "/PriyanshFca.json").EncryptFeature));
+                logger.Normal(getText(Language.IsNotABoolean,require(process.cwd() + "/NazrulFca.json").EncryptFeature));
                 data = appstate;
             } 
         }
