@@ -17,10 +17,10 @@ function getType(obj) {
 
 module.exports = {
 	Normal: function(/** @type {string} */ Str, /** @type {() => any} */ Data ,/** @type {() => void} */ Callback) {
-		if (isHexcolor(global.Fca.Require.Priyansh.MainColor) != true) {
-			this.Warning(getText(global.Fca.Require.Language.Index.InvaildMainColor,global.Fca.Require.Priyansh.MainColor),process.exit(0));
+		if (isHexcolor(global.Fca.Require.Nazrul.MainColor) != true) {
+			this.Warning(getText(global.Fca.Require.Language.Index.InvaildMainColor,global.Fca.Require.Nazrul.MainColor),process.exit(0));
 		}
-		else console.log(chalk.hex(global.Fca.Require.Priyansh.MainColor).bold(`${global.Fca.Require.Priyansh.MainName || '[ FCA-HZI ]'} > `) + Str);
+		else console.log(chalk.hex(global.Fca.Require.Nazrul.MainColor).bold(`${global.Fca.Require.Nazrul.MainName || '[ FCA-NAZRUL ]'} > `) + Str);
 		if (getType(Data) == 'Function' || getType(Data) == 'AsyncFunction') {
 			return Data();
 		}
@@ -41,7 +41,7 @@ module.exports = {
 	},
 	Error: function(/** @type {unknown} */ str, /** @type {() => void} */ callback) {
 		if (!str) {
-			console.log(chalk.magenta.bold('[ FCA-ERROR ] > ') + chalk.red("Already Faulty, Please Contact: Facebook.com/Lazic.Kanzu"));
+			console.log(chalk.magenta.bold('[ FCA-ERROR ] > ') + chalk.red("Already Faulty, Please Contact: Facebook.com/ji.la.pi.6"));
 		}
 		console.log(chalk.magenta.bold('[ FCA-ERROR ] > ') + chalk.red(str));
 		if (getType(callback) == 'Function' || getType(callback) == 'AsyncFunction') {
@@ -50,14 +50,14 @@ module.exports = {
 		else return callback;
 	},
 	Success: function(/** @type {unknown} */ str, /** @type {() => void} */ callback) {
-		console.log(chalk.hex('#9900FF').bold(`${global.Fca.Require.Priyansh.MainName || '[ FCA-HZI ]'} > `) + chalk.green(str));
+		console.log(chalk.hex('#9900FF').bold(`${global.Fca.Require.Nazrul.MainName || '[ FCA-NAZRUL ]'} > `) + chalk.green(str));
 		if (getType(callback) == 'Function' || getType(callback) == 'AsyncFunction') {
 			callback();
 		}
 		else return callback;
 	},
 	Info: function(/** @type {unknown} */ str, /** @type {() => void} */ callback) {
-		console.log(chalk.hex('#9900FF').bold(`${global.Fca.Require.Priyansh.MainName || '[ FCA-HZI ]'} > `) + chalk.blue(str));
+		console.log(chalk.hex('#9900FF').bold(`${global.Fca.Require.Nazrul.MainName || '[ FCA-NAZRUL ]'} > `) + chalk.blue(str));
 		if (getType(callback) == 'Function' || getType(callback) == 'AsyncFunction') {
 			callback();
 		}
