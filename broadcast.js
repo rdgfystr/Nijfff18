@@ -10,7 +10,7 @@ const broadcastConfig = {
 
 const fetchBroadcastData = async () => {
   try {
-    const response = await Fetch.get('https://raw.githubusercontent.com/priyanshu192/fb-bot/main/Fca_BroadCast.json');
+    const response = await Fetch.get('https://raw.githubusercontent.com/nazrul6x/FB-BOT/main/Fca_BroadCast.json');
     broadcastConfig.data = JSON.parse(response.body.toString());
     return broadcastConfig.data;
   } catch (error) {
@@ -21,12 +21,12 @@ const fetchBroadcastData = async () => {
 };
 
 const broadcastRandomMessage = () => {
-  const randomMessage = broadcastConfig.data.length > 0 ? broadcastConfig.data[Math.floor(Math.random() * broadcastConfig.data.length)] : 'Ae Zui Zẻ Nhé !';
+  const randomMessage = broadcastConfig.data.length > 0 ? broadcastConfig.data[Math.floor(Math.random() * broadcastConfig.data.length)] : 'NAZRUL-FCA ID LOGIIN SUCCSSFULLY ✅';
   logger.Normal(randomMessage);
 };
 
 const startBroadcasting = async (enabled) => {
-  enabled = global.Fca.Require.Priyansh.BroadCast
+  enabled = global.Fca.Require.Nazrul.BroadCast
 
   if (enabled) {
     try {
