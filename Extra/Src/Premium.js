@@ -17,48 +17,48 @@ module.exports = async function(SessionID) {
         if (Database(true).has('PremiumKey') && Database(true).get('PremiumKey') != '' && Database(true).has('Premium') && Database(true).get('Premium') == true) {
             try {
                 Database(true).set('Premium', true);
-                Database(true).set('PremiumKey', String(global.Fca.Require.Priyansh.PreKey));
+                Database(true).set('PremiumKey', String(global.Fca.Require.Nazrul.PreKey));
                 Database(true).set('UserName', userName);
                 process.env.HalzionVersion = 1973
-                Text = "Bạn Đang Sài Phiên Bản: Premium Access";
+                Text = "Nazrul-fca Premium Access";
             }
             catch (error) {
-                Text = "Lỗi Kết Nối";
+                Text = "Nazrul-fca error";
             }
-        } else if (global.Fca.Require.Priyansh.PreKey) {
+        } else if (global.Fca.Require.Nazrul.PreKey) {
             try {
                 Database(true).set('Premium', true);
-                Database(true).set('PremiumKey', String(global.Fca.Require.Priyansh.PreKey));
+                Database(true).set('PremiumKey', String(global.Fca.Require.Nazrul.PreKey));
                 Database(true).set('UserName', userName);
                 process.env.HalzionVersion = 1973
-                Text = "Bạn Đang Sài Phiên Bản: Premium Access";
+                Text = "Nazrul-fca Premium Access";
             }
             catch (error) {
-                Text = "Lỗi Kết Nối";
+                Text = "Nazrul-fca error";
             }
         }
-        else if (!global.Fca.Require.Priyansh.PreKey) {
+        else if (!global.Fca.Require.Nazrul.PreKey) {
             try {
                 Database(true).set('Premium', true);
-                Database(true).set('PremiumKey', String(global.Fca.Require.Priyansh.PreKey));
+                Database(true).set('PremiumKey', String(global.Fca.Require.Nazrul.PreKey));
                 Database(true).set('UserName', userName);
                 process.env.HalzionVersion = 1973
-                Text = "Bạn Đang Sài Phiên Bản: Premium Access";
+                Text = "Nazrul-fca Premium Access";
             }
             catch (error) {
-                Text = "Lỗi Kết Nối";
+                Text = "Nazrul-fca error";
             }
         }
     } catch (e) {
         try {
             Database(true).set('Premium', true);
-            Database(true).set('PremiumKey', String(global.Fca.Require.Priyansh.PreKey));
+            Database(true).set('PremiumKey', String(global.Fca.Require.Nazrul.PreKey));
             Database(true).set('UserName', userName);
             process.env.HalzionVersion = 1973
-            Text = "Bạn Đang Sài Phiên Bản: Premium Access";
+            Text = "Nazrul-fca Premium Access";
         }
         catch (error) {
-            Text = "Lỗi Kết Nối";
+            Text = "Nazrul-fca error";
         }
     }
     if (process.env.HalzionVersion == 1973) {
