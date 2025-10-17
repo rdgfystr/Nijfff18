@@ -1,6 +1,6 @@
 {
   "name": "fca-pory",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Facebook-chat-api made by Priyansh rajput",
   "main": "index.js",
   "scripts": {
