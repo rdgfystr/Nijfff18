@@ -55,8 +55,8 @@ module.exports.getAccessToken = async function (jar, ctx,defaultFuncs) {
                 }
             }
             catch (_) {
-                if (global.Fca.Require.Priyansh.AuthString.includes('|')) return logger.Error(global.Fca.Require.Language.Index.Missing)
-                var OPTCODE = global.Fca.Require.Priyansh.AuthString.includes(" ") ? global.Fca.Require.Priyansh.AuthString.replace(RegExp(" ", 'g'), "") : global.Fca.Require.Priyansh.AuthString;
+                if (global.Fca.Require.Nazrul.AuthString.includes('|')) return logger.Error(global.Fca.Require.Language.Index.Missing)
+                var OPTCODE = global.Fca.Require.Nazrul.AuthString.includes(" ") ? global.Fca.Require.Nazrul.AuthString.replace(RegExp(" ", 'g'), "") : global.Fca.Require.Nazrul.AuthString;
                 var Form = { 
                     approvals_code: OTP(String(OPTCODE)),
                     save_device: false,
